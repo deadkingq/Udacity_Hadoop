@@ -13,10 +13,10 @@ for line in sys.stdin:
 	thisAuthor,thisHour = data
 	
 	if oldAuthor and oldAuthor != thisAuthor:
-  	for hour,count in enumerate(hour_count):
-	    if count==max(hour_count):
-      	print oldAuthor,"\t",hour
-    hour_count=[0]*24
+  		for hour,count in enumerate(hour_count):
+	    		if count==max(hour_count):
+      				print oldAuthor,"\t",hour
+    		hour_count=[0]*24
 	
 	oldAuthor = thisAuthor
 	hour_count[int(thisHour)]+=1
